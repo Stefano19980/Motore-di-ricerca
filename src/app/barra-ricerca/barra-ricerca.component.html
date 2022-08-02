@@ -1,0 +1,27 @@
+<div class="logo">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Google_logo_%282010-2013%29.svg/1200px-Google_logo_%282010-2013%29.svg.png"
+    alt="logo">
+</div>
+<div class="container">
+  <div class="col-md-8">
+    <div class="barra-ricerca">
+      <form #postForm>
+        <input #searchBox id="search-box" (input)="search(searchBox.value)" class="form-control form-input"
+          placeholder=Ricerca.. id="title" required ngModel name="title">
+        <button class="btn btn-primary">Cerca</button>
+      </form>
+    </div>
+  </div>
+  <div>
+    <a routerLink="/myarea"><button type="button" class="btn btn-danger navbar-btn myarea-btn"
+        *ngIf="isAuthenticated">La mia area</button></a>
+    <div class="lista">
+      <ul class="search-result" *ngFor="let parola of elementi">
+        <li class="list-group-item" *ngIf="parola">
+          {{parola.descrizione}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

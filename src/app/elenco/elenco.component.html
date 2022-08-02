@@ -1,0 +1,23 @@
+<table class="table table-striped table-hover">
+  <thead style="color: white;">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Titolo</th>
+      <th scope="col">Info</th>
+      <th scope="col">Cancella</th>
+      <th scope="col">Modifica</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let parola of elementi">
+    <tr>
+      <th scope="row">{{parola.id}}</th>
+      <td>{{parola.titolo}}</td>
+      <td><a routerLink="/detail/{{parola.id}}">
+          <i class="fas fa-info-circle"></i>
+        </a></td>
+      <td> <button (click)="deleteElemento(parola.id)">x</button></td>
+      <td><a routerLink="/modifica/{{parola.id}}"><i class="fas fa-edit"></i></a></td>
+
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,59 @@
+.barra-ricerca {
+       position: relative;
+       box-shadow: 0 0 40px rgba(161, 78, 78, 0.1);
+       left: 26%;
+       top: 220px;
+
+}
+
+.barra-ricerca input {
+
+       height: 50px;
+       text-indent: 25px;
+       border: 2px solid #d6d4d4;
+}
+
+
+.barra-ricerca input:focus {
+
+       box-shadow: none;
+       border: 2px solid rgb(6, 6, 6);
+
+
+}
+
+.barra-ricerca button {
+
+       position: absolute;
+       top: 5px;
+       right: 5px;
+       height: 40px;
+       width: 110px;
+       background: rgb(250, 2, 2);
+
+}
+
+.lista {
+       color: black;
+       position: absolute;
+       top: 400px;
+       text-align: center;
+       right: 265px;
+}
+
+.myarea-btn {
+       position: absolute;
+       top: 0px;
+       right: 105px;
+       color: black;
+       border: transparent;
+       font-size: large;
+}
+
+
+img {
+       position: absolute;
+       max-width: 500px;
+       text-align: center;
+       left: 500px;
+}

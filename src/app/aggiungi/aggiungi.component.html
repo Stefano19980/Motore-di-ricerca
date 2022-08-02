@@ -1,0 +1,9 @@
+<div>
+  <input type="text" [(ngModel)]="titolo" placeholder="titolo">
+  <input type="text" [(ngModel)]="descrizione" placeholder="descrizione">
+  <input type="text" [(ngModel)]="chiavi" placeholder="chiavi">
+  <input type="text" [(ngModel)]="url" placeholder="url">
+  <a routerLink="/myarea"><button class="add-button" (click)="addUtente(titolo,descrizione,chiavi,url);">
+      Aggiungi utente
+    </button></a>
+</div>

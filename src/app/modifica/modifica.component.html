@@ -1,0 +1,22 @@
+<form [formGroup]="reactiveForm">
+  <div *ngIf="parola" style="color: white;">
+    <h2>{{parola.titolo | uppercase}} Modifica</h2>
+    <div><span>id: </span>{{parola.id}}</div>
+    <div>
+      <label for="utente-surname">Titolo: </label>
+      <input formControlName="titolo" placeholder="titolo" />
+      <div>
+        <label for="utente-name">Descrizione: </label>
+        <input id="utente-name" formControlName="descrizione" placeholder="descrizione">
+      </div>
+      <div>
+        <label for="utente-email">Chiavi: </label>
+        <input id="utente-email" formControlName="chiavi" placeholder="chiavi" />
+      </div>
+      <div>
+        <label for="utente-datan">Url: </label>
+        <input id="utente-datan" formControlName="url" placeholder="url">
+      </div>
+      <button type="button" (click)="goBack()" style="color: black;">go back</button>
+      <button type="button" (click)="save()" style="color: black;">save</button>
+    </div>

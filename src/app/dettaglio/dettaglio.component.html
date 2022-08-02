@@ -1,0 +1,21 @@
+<div *ngIf="parola" style="color: white;">
+  <h2>{{parola.titolo | uppercase}} Dettaglio</h2>
+  <div><span>id: </span>{{parola.id}}</div>
+  <div>
+    <label for="utente-surname">Cognome: </label>
+    <input [(ngModel)]="parola.titolo" placeholder="Cognome" disabled="true" />
+    <div>
+      <label for="utente-name">Nome: </label>
+      <input id="utente-name" [(ngModel)]="parola.descrizione" placeholder="nome utente" disabled="true">
+    </div>
+    <div>
+      <label for="utente-email">Email: </label>
+      <input id="utente-email" [(ngModel)]="parola.chiavi" placeholder="email utente" disabled="true" />
+    </div>
+    <div>
+      <label for="utente-datan">Data di nascita: </label>
+      <input id="utente-datan" [(ngModel)]="parola.url" placeholder="data di nascita" disabled="true" />
+    </div>
+    <button type="button" (click)="goBack()" style="color: black;">go back</button>
+    <a routerLink="/modifica/{{parola.id}}" style="color: black;"><button>Modifica</button></a>
+  </div>

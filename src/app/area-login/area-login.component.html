@@ -1,0 +1,16 @@
+<div class="navbar">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a routerLink="/" class="navbar-brand">Home Page</a>
+        <div class="nav navbar-nav navbar-right">
+          <form>
+            <a routerLink="/auth"><button type="submit" class="btn btn-danger navbar-btn login-btn"
+                *ngIf="!isAuthenticated">Accedi</button></a>
+            <button class="btn btn-danger navbar-btn logout-btn" (click)="logout()" type="button"
+              *ngIf="isAuthenticated">
+              Logout
+            </button>
+          </form>
+        </div>
+      </div>
